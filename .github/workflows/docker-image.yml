@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ansible-playbook:$(date +%s)
+      run: |
+        docker build . --file Dockerfile --tag ansible-playbook:$(date +%s)
+        docker push docker.pkg.github.com/netfirms/ansible_container/ansible-playbook:$(date +%s)
