@@ -17,4 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         sed -i '/ansible-playbook/c\ansible' ./Dockerfile
+        cat ./Dockerfile
         docker build . --file Dockerfile --tag ansible:$(date +%s)
