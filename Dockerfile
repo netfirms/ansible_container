@@ -57,4 +57,5 @@ ENV PYTHONPATH /ansible/lib
 ENTRYPOINT ["ansible-playbook"]
 
 # Can also use ["ansible"] if wanting it to be an ad-hoc command version
+
 #ENTRYPOINT ["ansible"]
