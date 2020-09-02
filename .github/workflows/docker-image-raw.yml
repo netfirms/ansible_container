@@ -19,3 +19,4 @@ jobs:
         sed '57 s/ansible-playbook/ansible/g' Dockerfile
         cat Dockerfile
         docker build . --file Dockerfile --tag ansible:$(date +%s)
+        docker push docker.pkg.github.com/netfirms/ansible_container/ansible:$(date +%s)
