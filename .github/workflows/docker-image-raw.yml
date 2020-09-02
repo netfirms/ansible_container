@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: |
-        sed -i '/["ansible-playbook"]/c\["ansible"]' Dockerfile
+        sed '57 s/ansible-playbook/ansible/g' Dockerfile
         cat Dockerfile
         docker build . --file Dockerfile --tag ansible:$(date +%s)
