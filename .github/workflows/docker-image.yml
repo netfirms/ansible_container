@@ -17,4 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --file Dockerfile --tag ansible-playbook:$(date +%s)
+        docker tag ansible-playbook docker.pkg.github.com/netfirms/ansible_container/ansible-playbook:$(date +%s)
         docker push docker.pkg.github.com/netfirms/ansible_container/ansible-playbook:$(date +%s)
